@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <h2>Welcome to the Bike Shop</h2>
+    <p>Chose one of our bikes:</p>
+    <ul>{% for bike in bikes %}
+        <li><a href="/bikes/{{ bike.id }}/">{{ bike.name }}</a></li>
+    {% empty %}
+        There are no bikes
+    {% endfor %}</ul>
+  </body>
+</html>

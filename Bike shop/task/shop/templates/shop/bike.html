@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ bike.name }}</title>
+</head>
+<body>
+<h2>{{ bike.name }}</h2>
+<p>frame: {{ bike.frame }}</p>
+<p>seat: {{ bike.seat }}</p>
+<p>tires: {{ bike.tire }}</p>
+<p>basket:{% if bike.has_basket %} yes{% else %} no{% endif %}</p>
+<p>description: {{ bike.description}}</p>
+<br>
+{% if avail %}
+<p>If you want to order the bike, fill in the form below:</p>
+{% include "shop/new_order.html" %}
+{% else %}
+<p>No bikes to order for this time</p>
+{% endif %}
+</body>
+</html>
